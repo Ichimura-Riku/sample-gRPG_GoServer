@@ -1,1 +1,1 @@
-# sample-gRPG_GoServer
+# sample-gRPC_GoServer
