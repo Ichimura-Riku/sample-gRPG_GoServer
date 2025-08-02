@@ -1,6 +1,8 @@
 // protoのバージョンの宣言
 syntax = "proto3";
 
+option go_package = "github.com/Ichimura-Riku/sample-gRPC_GoServe/pkg/grpc/hello/v1;hellov1";
+
 // packageの宣言
 package myapp;
 

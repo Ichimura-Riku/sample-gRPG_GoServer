@@ -1,9 +1,0 @@
-version: v1
-plugins:
-  # Todo: remoteプラグインじゃないのでもし正常動作しなかったら置き換える
-  - name: go
-    out: gen
-    opt: paths=source_relative
-  - name: go-grpc
-    out: gen
-    opt: paths=source_relative

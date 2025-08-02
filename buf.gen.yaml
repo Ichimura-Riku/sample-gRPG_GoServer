@@ -1,0 +1,17 @@
+version: v1
+# マネージドモードを有効
+managed:
+  enabled: true
+  go_package_prefix:
+    default: github.com/Ichimura-Riku/sample-gRPC_GoServe/pkg/grpc # デフォルトのpackage名を指定。これは必須
+
+plugins:
+  # リモートプラグインを使用
+  - plugin: buf.build/protocolbuffers/go:v1.31.0
+    out: pkg/grpc
+    # GoのモジュールパスがProtobufファイルから相対的に解決されるよう指定
+    opt: paths=source_relative
+  # protoc-gen-go-grpcプラグイン
+  - plugin: buf.build/grpc/go:v1.3.0
+    out: pkg/grpc
+    opt: paths=source_relative
